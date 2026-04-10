@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="header(pageTitle)">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold" th:href="@{/books}">Book Store</a>
+            <span class="navbar-text text-white fs-5" th:text="${pageTitle}">
+                Tiêu đề trang
+            </span>
+        </div>
+    </nav>
+</div>
+
+<div th:fragment="footer">
+    <footer class="bg-light border-top mt-5 py-3">
+        <div class="container text-center text-muted">
+            © 2026 - Hệ thống quản lý sách
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
