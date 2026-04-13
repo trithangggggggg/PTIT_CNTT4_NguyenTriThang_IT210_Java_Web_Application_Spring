@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cập nhật thông tin nhà hàng</title>
+</head>
+<body>
+
+<h1>Cập nhật thông tin nhà hàng</h1>
+
+<form th:action="@{/merchant/update-profile}" th:object="${restaurantProfile}" method="post">
+
+    <div>
+        <label>Tên cửa hàng:</label>
+        <input type="text" th:field="*{name}">
+    </div>
+
+    <div>
+        <label>Số điện thoại:</label>
+        <input type="text" th:field="*{phone}">
+    </div>
+
+    <div>
+        <label>Đang mở cửa:</label>
+        <input type="checkbox" th:field="*{active}">
+    </div>
+
+    <button type="submit">Lưu</button>
+</form>
+
+</body>
+</html>
