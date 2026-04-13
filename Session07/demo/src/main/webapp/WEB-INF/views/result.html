@@ -5,7 +5,16 @@
     <meta charset="utf-8">
 </head>
 <body>
-<h2>Upload thành công</h2>
-<p>Tên file: <span th:text="${fileName}"></span></p>
+
+<h2>Kết quả upload</h2>
+
+<p th:if="${error}" th:text="${error}" style="color:red;"></p>
+
+<div th:if="${fileName != null}">
+    <p>Upload thành công</p>
+    <p>Tên file: <span th:text="${fileName}"></span></p>
+    <img th:src="@{/images/{file}(file=${fileName})}" width="200" alt="Ảnh upload">
+</div>
+
 </body>
 </html>

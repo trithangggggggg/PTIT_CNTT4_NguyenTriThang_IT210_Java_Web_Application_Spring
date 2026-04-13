@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>Upload File</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-<body>
-$END$
+<body class="container mt-5">
+
+<h2 class="mb-4">Form Upload File</h2>
+
+<form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Chọn file</label>
+        <input type="file" name="file" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+
 </body>
 </html>
